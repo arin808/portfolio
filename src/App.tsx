@@ -1,12 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-
+import Navbar from './Components/Navbar';
+import { Route, Routes } from 'react-router-dom';
+import Home from './Components/Home';
+import Skills from './Components/TechnicalBackground/Skills';
+import Experience from './Components/TechnicalBackground/Experience';
+import Projects from './Components/TechnicalBackground/Projects';
+import About from './Components/AboutMe';
 function App() {
   return (
     <div className="App">
-        <h1>Portfolio</h1>
-        <h2>By: Arin</h2>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/experience" element={<Experience />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
     </div>
   );
 }
