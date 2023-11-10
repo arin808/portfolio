@@ -7,6 +7,7 @@ import Skills from './Components/TechnicalBackground/Skills';
 import Experience from './Components/TechnicalBackground/Experience';
 import Projects from './Components/TechnicalBackground/Projects';
 import About from './Components/AboutMe';
+import Footer from './Components/Footer';
 function App() {
   return (
     <div className="App">
@@ -18,6 +19,7 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/about" element={<About />} />
         </Routes>
+        <Footer />
     </div>
   );
 }
